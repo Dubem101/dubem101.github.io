@@ -1,0 +1,20 @@
+yellow
+
+rgb(214, 214, 76)
+hsl(60, 63%, 57%)
+#D6D64C
+
+light blue
+
+rgb(231, 231, 248)
+hsl(240, 55%, 94%)
+#E7E7F8
+
+roboto
+font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:200|Roboto&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Raleway:200|Roboto&display=swap');
+</style>
