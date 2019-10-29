@@ -1,14 +1,18 @@
-#initial-background{
-  background-image: image(main-background);
-  background-size: auto;
-  max-height: 100%;
+.container{
+  background-image: url(https://dubem101.github.io/images/background-image2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+
+  width: 100%;
+  max-width: 100%;
+  max-height: 800px;
+  height: 800px;
 }
 
-#main-background{
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  width: auto;
+.section-description{
+  width: 60%;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 #initial-greeting{
@@ -36,6 +40,15 @@
 
 body{
   margin: 0;
+}
+
+h2{
+  margin-top: 0px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 100;
+  padding-top: 100px;
 }
 #main-navbar{
   list-style-type: none;
@@ -72,6 +85,28 @@ body{
 #logo{
   padding: 0;
 }
+
+#Education{
+  height: 720px;
+  background-color: black;
+  margin: 0;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#Education p{
+  font-size: 24px;
+  text-align: justify;
+}
+
+hr{
+  width: 60%;
+  border-color: #727878;
+  opacity: 0.2;
+  border-top: 1px solid #eee;
+}
+
+
 
 
 
