@@ -28,7 +28,7 @@
 }
 
 .btn {
-  border: none;
+  border: 2px solid black;
   background-color: black;
   color: white;
   padding: 14px 28px;
@@ -39,8 +39,9 @@
   transition: background-color 0.3s;
 }
 .btn.resume {
-  background-color: #ffd400;
-  color: white;
+  border-color: #ffd400;
+  background-color: white;
+  color: #9b870c;
 }
 .btn:hover {
   background-color: lightyellow;
