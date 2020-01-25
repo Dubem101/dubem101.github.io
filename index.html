@@ -16,16 +16,16 @@
 
 <body>
   <nav>
-    <ul id="main-navbar">
-      <li><a href="#" id="logo" style="
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-    "><img src="images/logo.png" alt="logo" width="46.4px" height="46.4px"></a></li>
-      <li style="float:right"><a>Contact Me</a></li>
-      <li style="float:right"><a>Projects</a></li>
-      <li style="float:right"><a href="#Education">Education</a></li>
+    <a href="/#" id="navbar-logo"><img src="images/logo.png" alt="logo" width="46.4px" height="46.4px"></a>
+    <ul class="navbar-links">
+      <li><a>Contact Me</a></li>
+      <li><a href="#Software-Projects">Projects</a></li>
+      <li><a href="#Education">Education</a></li>
+      <li>
+        <a class="btn resume" href="docs/Chidubem Ogbudibe Master Resume.pdf">
+          Resume
+        </a>
+      </li>
     </ul>
   </nav>
   <section>
@@ -53,9 +53,28 @@
         • SDLC, Agile methodologies, and cross-functionality
       </p>
     </div>
+  </section>
 
-    <a href="docs/Chidubem Ogbudibe Master Resume.pdf"><img src="images/resume-button.png" alt="resume button"
-        width="100px"></a>
+  <section id="Software-Projects">
+    <div id="project-container">
+      <div class="project-card">
+        <img src="images/ssonc-january10.png">
+        <div class="project-card text-container">
+          <p>
+            Developed Success Stories of New Canadians Website
+          </p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/sudoku-august31.png">
+        <div class="project-card text-container">
+          <p>
+            Developed Sudoku Game Android Application
+          </p>
+        </div>
+      </div>
+    </div>
+
   </section>
 </body>
 

@@ -1,56 +1,81 @@
-.container{
-  background-image: url(https://dubem101.github.io/images/background-image2.png);
+.container {
+  background-image: url("../images/background-image.png");
   background-repeat: no-repeat;
   background-size: 100% 110%;
-
   width: 100%;
   max-width: 100%;
   max-height: 800px;
   height: 800px;
 }
 
-.section-description{
+.section-description {
   width: 60%;
   margin: 0 auto;
   text-align: justify;
 }
 
-#initial-greeting{
-  position: absolute; 
+p {
+  font-family: Roboto, sans-serif;
+}
+
+#initial-greeting {
+  position: absolute;
   top: 50%;
   left: 35%;
   transform: translate(-50%, -35%);
-  font-family: 'Inconsolata', monospace;
-  max-width:50%;
+  font-family: "Inconsolata", monospace;
+  max-width: 50%;
   height: auto;
   width: auto;
-  
 }
 
-#initial-greeting h1{
-  font-size: 88px;
+#initial-greeting h1 {
+  font-size: 4em;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-#initial-greeting-description{
+#initial-greeting-description {
   max-width: 70%;
   font-size: 18px;
 }
 
-body{
+body {
   margin: 0;
 }
 
-h2{
+h2 {
   margin-top: 0px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
   font-size: 56px;
   font-weight: 100;
   padding-top: 100px;
 }
-#main-navbar{
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.navbar-links li a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+.navbar-links li a:hover {
+  color: grey;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -60,53 +85,95 @@ h2{
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 500;
+  height: 64px;
+  z-index: 10;
+  box-shadow: 0 0 5px #afafaf;
 }
-
-#main-navbar li{
-  float: left;;
-}
-
-#main-navbar a{
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-}
-
-#main-navbar li a:hover{
-  background-color: grey;
-}
-
-#logo{
+nav #navbar-logo {
   padding: 0;
+  z-index: 1100000000;
 }
 
-#Education{
+#Education {
   height: 720px;
   background-color: black;
   margin: 0;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
-#Education p{
+#Education p {
   font-size: 24px;
   text-align: justify;
 }
 
-hr{
+#Software-Projects {
+  height: 100vh;
+  width: 100%;
+}
+
+hr {
   width: 60%;
   border-color: #727878;
   opacity: 0.2;
   border-top: 1px solid #eee;
 }
 
+.btn {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+.btn.resume {
+  background-color: #ffd400;
+  color: white;
+}
+.btn:hover {
+  background-color: lightyellow;
+  color: #ffd400;
+}
 
+#project-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#project-container .project-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  /* 5px rounded corners */
+  width: 92%;
+  max-width: 30vw;
+  border-radius: 5px;
+  margin: 32px;
+}
+#project-container .project-card img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+#project-container .project-card.text-container {
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+#project-container .project-card .project-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
+@media screen and (max-width: 750px) {
+  #project-container {
+    flex-direction: column;
+  }
+  #project-container .project-card {
+    max-width: 100vw;
+  }
+}
 
-
+/*# sourceMappingURL=style.css.map */
