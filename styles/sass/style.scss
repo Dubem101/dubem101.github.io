@@ -3,6 +3,10 @@
 @import "button";
 @import "fa";
 
+html {
+  scroll-behavior: smooth;
+}
+
 header{
   background-image: url("../images/background-image.png");
   background-repeat: no-repeat;
@@ -147,6 +151,13 @@ nav{
       text-align: justify;
       border-radius: 5px;
       padding: 1vw;
+
+      em{
+        text-decoration: none;
+        color: #a197f7;
+        font-weight: bold;
+        font-style: normal;
+      }
 
       #mySkills{
         display: grid;

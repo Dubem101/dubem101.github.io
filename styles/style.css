@@ -95,9 +95,16 @@
 .fa.fa-linkedin {
   font-size: 30px;
 }
+.fa.fa-bars {
+  font-size: 1.5em;
+}
 
 .fa:hover {
   opacity: 0.7;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 header {
@@ -230,6 +237,12 @@ nav {
   text-align: justify;
   border-radius: 5px;
   padding: 1vw;
+}
+#AboutMe .aboutme-container .description em {
+  text-decoration: none;
+  color: #a197f7;
+  font-weight: bold;
+  font-style: normal;
 }
 #AboutMe .aboutme-container .description #mySkills {
   display: grid;
