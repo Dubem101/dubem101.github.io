@@ -7,6 +7,7 @@
 #project-container .project-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 25px 0;
   transition: 0.3s;
 }
@@ -15,26 +16,42 @@
   font-size: 1.5em;
 }
 #project-container .project-card img {
-  border-radius: 5px;
+  border-radius: 10px 0px 0px 10px;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 #project-container .project-card .technologies {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: right;
   list-style-type: none;
 }
-#project-container .project-card .technologies li {
+#project-container .project-card .technologies .technologies-item {
+  font-size: 0.75em;
+  padding: 7px;
+  margin: 5px;
+  background: #333;
+  color: #cfcfcf;
+  border-radius: 5px;
   font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace;
 }
 #project-container .project-card .text-container {
   background-color: white;
   width: 100%;
+  height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  text-align: center;
+  border-radius: 0px 10px 10px 0px;
+  text-align: left;
   transition: 0.3s;
+}
+#project-container .project-card .text-container .text-wrapper {
+  margin: 10px;
+}
+#project-container .project-card .text-container a {
+  text-decoration: none;
+}
+#project-container .project-card .text-container p {
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 }
 #project-container .project-card .text-container:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -61,63 +78,69 @@
   color: #ffd400;
 }
 
-.fa.fa-github {
-  font-size: 30px;
+.fa {
   width: 50px;
   text-align: center;
   text-decoration: none;
+}
+.fa.fa-external-link {
+  font-size: 25px;
+}
+.fa.fa-twitter {
+  font-size: 30px;
+}
+.fa.fa-github {
+  font-size: 30px;
+}
+.fa.fa-linkedin {
+  font-size: 30px;
 }
 
 .fa:hover {
   opacity: 0.7;
 }
 
-.container {
+header {
   background-image: url("../images/background-image.png");
   background-repeat: no-repeat;
   background-position: center;
+  align-content: center;
   width: 100%;
   height: 100vh;
 }
 
-.section-description {
-  width: 60%;
-  margin: 0 auto;
-  text-align: justify;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 1em;
-}
-
-p {
-  font-family: Roboto, sans-serif;
-}
-
-ul {
-  padding: 0;
-}
-
-#initial-greeting {
+.container {
+  width: 80vw;
+  margin: 0;
   position: absolute;
   top: 50%;
-  left: 35%;
-  transform: translate(-50%, -35%);
-  font-family: "Inconsolata", monospace;
-  max-width: 50%;
-  height: auto;
-  width: auto;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
-#initial-greeting h1 {
+.container #initial-greeting {
+  font-family: "Inconsolata", monospace;
+  width: 100%;
+}
+.container #initial-greeting h1 {
   font-size: 4em;
   margin-top: 0;
   margin-bottom: 0;
 }
-
-#initial-greeting-description {
+.container #initial-greeting h2 {
+  font-size: 3em;
+  color: #22333B;
+}
+.container #initial-greeting p {
+  color: #22333B;
+}
+.container #initial-greeting #initial-greeting-description {
   max-width: 70%;
   font-size: 18px;
+}
+
+ul {
+  padding: 0;
 }
 
 body {
@@ -130,77 +153,174 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #navbar-logo {
-  margin-left: 8px;
+  padding: 0px 8px;
+  z-index: 1100000000;
 }
 
-.navbar-links {
+#navbar-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
-.navbar-links li a {
+#navbar-links .item {
+  width: 100%;
+  text-align: center;
+  padding: 14px 5px;
+  display: none;
+  order: 2;
+}
+#navbar-links .item.active {
+  display: block;
+}
+#navbar-links .toggle {
+  order: 1;
+  padding: 14px 8px;
+}
+#navbar-links li a {
   color: black;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace;
   font-size: 1em;
   transition: color 0.3s;
 }
-.navbar-links li a:hover {
+#navbar-links li a:hover {
   color: grey;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 7px 0px;
   overflow: hidden;
   background-color: white;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 64px;
   z-index: 10;
   box-shadow: 0 0 5px #afafaf;
 }
-nav #navbar-logo {
-  padding: 0;
-  z-index: 1100000000;
-}
 
-#Education {
-  background-image: url("../images/background-image-flipped.png");
-  background-repeat: no-repeat;
-  background-position: center;
+#AboutMe {
+  background-color: #EAE0D5;
   width: 100%;
-  height: 100vh;
   margin: 0;
+  padding: 5vh 0;
   color: black;
 }
-#Education h2 {
-  text-align: center;
+#AboutMe h2 {
+  font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  text-align: left;
   font-size: 3em;
+  margin-left: 5vw;
+}
+#AboutMe .aboutme-container {
+  display: block;
+  justify-content: space-between;
+  margin: 0 6vw;
+}
+#AboutMe .aboutme-container .description {
+  width: 100%;
+  text-align: justify;
+  border-radius: 5px;
+  padding: 1vw;
+}
+#AboutMe .aboutme-container .description #mySkills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  list-style-type: none;
+}
+#AboutMe .aboutme-container img {
+  width: 100%;
+  vertical-align: middle;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: lightgray;
+  margin: auto;
+}
+#AboutMe .aboutme-container li {
+  color: white;
+}
+#AboutMe .aboutme-container p {
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  font-size: 1.1em;
+  text-align: justify;
+  overflow: hidden;
 }
 
-#Education p {
-  font-size: 1.5em;
-  text-align: justify;
+.technologies-item {
+  font-size: 0.75em;
+  padding: 7px;
+  margin: 5px;
+  background: #333;
+  color: #cfcfcf;
+  border-radius: 5px;
+  font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, Lucida Console, Monaco, monospace;
 }
 
 #Software-Projects {
-  background-color: #ffd400;
+  background-color: #22333B;
   width: 100%;
+}
+
+footer {
+  text-align: center;
+}
+footer p {
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  font-size: 1em;
+  margin: 30px;
+}
+footer .icon {
+  display: inline-block;
+  margin: 6px;
+}
+footer .fa {
+  color: black;
 }
 
 @media (min-width: 992px) {
   #project-container .project-card {
     flex-direction: row;
+  }
+}
+@media (min-width: 750px) {
+  #AboutMe .aboutme-container {
+    display: flex;
+    align-items: center;
+  }
+  #AboutMe .aboutme-container .description {
+    width: 50%;
+  }
+  #AboutMe .aboutme-container img {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin: 0 16px;
+  }
+}
+@media (min-width: 600px) {
+  #navbar-links {
+    justify-content: center;
+  }
+  #navbar-links .item {
+    display: block;
+    width: auto;
+    order: 1;
+    padding: 14px;
+  }
+  #navbar-links .toggle {
+    display: none;
+  }
+  #navbar-links #navbar-logo {
+    flex: 1;
+    order: 1;
   }
 }
 

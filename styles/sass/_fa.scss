@@ -1,9 +1,20 @@
 .fa{
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  
+  &.fa-external-link {
+    font-size: 25px;
+  }
+
+  &.fa-twitter {
+    font-size: 30px;
+  }
   &.fa-github {
     font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
+  }
+  &.fa-linkedin {
+    font-size: 30px;
   }
 }
 

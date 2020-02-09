@@ -3,54 +3,54 @@
 @import "button";
 @import "fa";
 
-.container{
+header{
   background-image: url("../images/background-image.png");
   background-repeat: no-repeat;
   background-position: center;
 
+  align-content: center;
   width: 100%;
   height: 100vh;
 }
 
-.section-description{
-  width: 60%;
-  margin: 0 auto;
-  text-align: justify;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  padding: 1em;
-}
+.container{
+  width: 80vw;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
-p{
-  font-family: variables.$paragraph-font;
+
+  #initial-greeting{
+    font-family: 'Inconsolata', monospace;
+    width: 100%;
+
+    h1{
+      font-size: 4em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h2{
+      font-size: 3em;
+      color: #22333B;
+    }
+
+    p{
+      color: #22333B;
+    }
+
+    #initial-greeting-description{
+      max-width: 70%;
+      font-size: 18px;
+    }
+  }
 }
 
 ul{
   padding: 0;
-}
-
-#initial-greeting{
-  position: absolute; 
-  top: 50%;
-  left: 35%;
-  transform: translate(-50%, -35%);
-  font-family: 'Inconsolata', monospace;
-  max-width:50%;
-  height: auto;
-  width: auto;
-  
-}
-
-#initial-greeting h1{
-  font-size: 4em;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-#initial-greeting-description{
-  max-width: 70%;
-  font-size: 18px;
 }
 
 body{
@@ -63,18 +63,39 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #navbar-logo{
-  margin-left: 8px;
+  padding: 0px 8px;
+  z-index: 1100000000;
 }
-.navbar-links{
+
+#navbar-links{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+
+  .item{
+    width: 100%;
+    text-align: center;
+    padding: 14px 5px;
+    display: none;
+    order: 2;
+  }
+
+  .item.active {
+    display: block;
+  }
+
+  .toggle{
+    order: 1;
+    padding: 14px 8px;
+  }
 
   li a{
     color: black;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
   
     font-family: variables.$code-font;
@@ -87,57 +108,152 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: block;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 7px 0px;
   overflow: hidden;
   background-color: white;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 64px;
   z-index: 10;
   box-shadow: 0 0 5px rgb(175, 175, 175);
-  #navbar-logo{
-    padding: 0;
-    z-index: 1100000000;
-  }
 }
 
 
-#Education{
-  background-image: url("../images/background-image-flipped.png");
-  background-repeat: no-repeat;
-  background-position: center;
+#AboutMe{
+  background-color: #EAE0D5;
 
   width: 100%;
-  height: 100vh;
   margin: 0;
+  padding: 5vh 0;
   color: black;
+
   h2{
-    text-align: center;
+    font-family: variables.$heading;
+    text-align: left;
     font-size: 3em;
+    margin-left: 5vw;
+  }
+
+  .aboutme-container{
+    display: block;
+    justify-content: space-between;
+    margin: 0 6vw; 
+    .description{
+      width: 100%;
+      text-align: justify;
+      border-radius: 5px;
+      padding: 1vw;
+
+      #mySkills{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 200px));
+        list-style-type: none;
+      }
+    }
+  
+    img{
+      width: 100%;
+      vertical-align: middle;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      background-color: rgb(211, 211, 211);
+      margin: auto;
+    }
+
+    li{
+      color: white;
+    }
+
+    p{
+      font-family: variables.$paragraph-font;
+      font-size: 1.1em;
+      text-align: justify;
+      overflow: hidden;
+    }
   }
 }
 
-#Education p{
-  font-size: 1.5em;
-  text-align: justify;
+.technologies-item{
+  font-size: 0.75em;
+  padding: 7px;
+  margin: 5px;
+  background: #333;
+  color: rgb(207, 207, 207);
+  border-radius: 5px;
+  font-family: variables.$code-font;
 }
 
 #Software-Projects{
-  background-color: variables.$primary-color;
+  background-color: variables.$palette4;
   width: 100%;
+}
+
+footer{
+  text-align: center;
+
+  p{
+    font-family: variables.$paragraph-font;
+    font-size: 1em;
+    margin: 30px;
+  }
+  
+  .icon{
+    display: inline-block;
+    margin: 6px;
+   }
+
+   .fa{
+    color: black;
+   }
 }
 
 @media (min-width: 992px) {
   #project-container .project-card{
     flex-direction: row;
   }
+}
+
+@media (min-width: 750px) {
+  #AboutMe .aboutme-container{
+    display:flex;
+    align-items: center;
+    .description{
+      width: 50%;
+    }
+
+    img{
+      max-width:400px;
+      max-height:400px;
+      width: auto;
+      height: auto;
+      margin: 0 16px;
+    }
+  }
+}
+
+
+@media (min-width: 600px) {
+  #navbar-links{
+    justify-content: center;
+    .item {
+      display: block;
+      width: auto;
+      order: 1;
+      padding: 14px;
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    #navbar-logo{
+      flex: 1;
+      order: 1;
+    }
+  } 
 }
 
 

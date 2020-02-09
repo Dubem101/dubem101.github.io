@@ -6,6 +6,7 @@
     .project-card{
       display: flex;
       flex-direction: column;
+      align-items: center;
       margin: 25px 0;
       transition: 0.3s;
       
@@ -15,7 +16,7 @@
       }
     
       img {
-        border-radius: 5px;
+        border-radius: 10px 0px 0px 10px;
         width: 100%;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       }
@@ -23,10 +24,16 @@
       .technologies{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: right;
         list-style-type: none;
 
-        li{
+        .technologies-item{
+          font-size: 0.75em;
+          padding: 7px;
+          margin: 5px;
+          background: #333;
+          color: rgb(207, 207, 207);
+          border-radius: 5px;
           font-family: variables.$code-font;
         }
       }
@@ -34,10 +41,23 @@
       .text-container {
         background-color: white;
         width: 100%;
+        height: auto;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        border-radius: 5px;
-        text-align: center;
+        border-radius: 0px 10px 10px 0px;
+        text-align: left;
         transition: 0.3s;
+
+        .text-wrapper{
+          margin: 10px;
+        }
+
+        a{
+          text-decoration: none;
+        }
+        
+        p{
+          font-family: variables.$paragraph-font;
+        }
       }
       .text-container:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
