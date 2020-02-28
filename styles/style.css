@@ -96,7 +96,7 @@
   font-size: 30px;
 }
 .fa.fa-bars {
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .fa:hover {
@@ -135,7 +135,6 @@ header {
   margin-bottom: 0;
 }
 .container #initial-greeting h2 {
-  font-size: 3em;
   color: #22333B;
 }
 .container #initial-greeting p {
@@ -157,6 +156,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+}
+
+h2 {
+  font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
+  text-align: left;
+  font-size: 3em;
 }
 
 #navbar-logo {
@@ -222,9 +227,6 @@ nav {
   color: black;
 }
 #AboutMe h2 {
-  font-family: Calibre, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif;
-  text-align: left;
-  font-size: 3em;
   margin-left: 5vw;
 }
 #AboutMe .aboutme-container {
@@ -279,6 +281,22 @@ nav {
 #Software-Projects {
   background-color: #22333B;
   width: 100%;
+  margin: 0;
+  padding: 5vh 0;
+}
+#Software-Projects h2 {
+  margin-left: 5vw;
+  color: white;
+}
+#Software-Projects #otherProjects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+#Software-Projects #otherProjects-container .otherProject {
+  background-color: white;
+  border: 1px solid #E2E2E2;
+  border-radius: 0.5rem;
 }
 
 footer {

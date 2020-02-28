@@ -38,7 +38,6 @@ header{
     }
 
     h2{
-      font-size: 3em;
       color: #22333B;
     }
 
@@ -64,6 +63,12 @@ body{
 h1, h2, h3, h4, h5, h6{
   margin: 0px;
   font-family: variables.$heading;
+}
+
+h2{
+  font-family: variables.$heading;
+  text-align: left;
+  font-size: 3em;
 }
 
 #navbar-logo{
@@ -136,9 +141,6 @@ nav{
   color: black;
 
   h2{
-    font-family: variables.$heading;
-    text-align: left;
-    font-size: 3em;
     margin-left: 5vw;
   }
 
@@ -200,6 +202,25 @@ nav{
 #Software-Projects{
   background-color: variables.$palette4;
   width: 100%;
+  margin: 0;
+  padding: 5vh 0;
+
+  h2{
+    margin-left: 5vw;
+    color: white;
+  }
+
+  #otherProjects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+
+    .otherProject{
+      background-color: white;
+      border: 1px solid #E2E2E2;
+      border-radius: .5rem;
+    }
+  }
 }
 
 footer{
