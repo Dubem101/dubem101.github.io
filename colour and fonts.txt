@@ -1,7 +1,0 @@
-Palette:
-main
-#FFD400;
-#fff;
-#0A0908;
-#22333B
-#EAE0D5

@@ -27,7 +27,7 @@ const projects = [
         "https://dubem101.github.io/",
         "https://github.com/Dubem101/dubem101.github.io",
         "images/pwebsite-february8.png",
-        ["HTML5", "CSS3", "JavaScript"]),
+        ["HTML5/CSS3", "SASS", "JavaScript"]),
     new ProjectData("Success Stories of New Canadians Website",
         "Developed Success Stories of New Canadians website to help share the stories of Canadian immigrants. Implemented the programmatically generated blog pages through Gatsby, easily editable through NetlifyCMS. Researched UX principles in developing responsive landing page components. Created a script to dynamically display the countries of the stories hosted on the site.",
         "https://immigrant-success-canada.netlify.com/",
