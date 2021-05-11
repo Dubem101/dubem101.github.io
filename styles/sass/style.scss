@@ -237,8 +237,13 @@ footer{
     margin: 6px;
    }
 
-   .fa{
+   .fab{
     color: black;
+   }
+
+   .fab:hover{
+    transition: 0.3s;
+    color: lightgray;
    }
 }
 

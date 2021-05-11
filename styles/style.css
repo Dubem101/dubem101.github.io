@@ -311,8 +311,12 @@ footer .icon {
   display: inline-block;
   margin: 6px;
 }
-footer .fa {
+footer .fab {
   color: black;
+}
+footer .fab:hover {
+  transition: 0.3s;
+  color: lightgray;
 }
 
 @media (min-width: 992px) {
